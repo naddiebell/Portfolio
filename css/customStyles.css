@@ -1,3 +1,19 @@
 .savelyImg {
     display: block;
 }
+
+.savely-btn{
+    margin-bottom: 20px;
+}
+
+.savelyToolsList {
+    width: 40%;
+}
+
+.closeWindow {
+    margin-top: 20px;
+}
+
+.savelyImg {
+    margin: auto;
+}
