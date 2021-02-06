@@ -38,6 +38,42 @@ class Particle {
     }
     // check particle position, check mouse position, move the particle, draw the particle
     update() {
-        
+        //check if particle is still within canvas
+        if (this.x > canvas.width || this.x < 0 ) {
+            this.directionX = -this.directionX;
+        } 
+        if (this.y > canvas.height || this.y < 0) {
+            this.directionY = -this.directionY;
+        }
+        //check if mouse position overlaps with particle position- collision detection - mouse position/particle position
+        let dx = mouse.x -this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx*dx + dy*dy)
+        if(distance < mouse.radius + this.size){
+            if (mouse.x < this.x && this.x < canvas.width -this.size * 10) {
+                this.x += 10;
+            }
+            if (mouse.x > this.x && this.x > this.size * 10) {
+                this.x -= 10;
+            }
+            if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+                this.y += 10;
+            }
+            if (mouse.y > this.y && this.y > this.size * 10) {
+                this.y -=10;
+            }
+        }
+        // move particle
+        this.x += this.directionX;
+        this.y += this.directionY;
+        // draw particle
+        this.draw();
     }
+}
+
+// create particle array
+function init() {
+    particlesArray = [];
+    let numberOfParticles = (canvas.height * canvas.width) / 9000;
+    for (let i = 0; i )
 }
