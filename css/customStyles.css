@@ -17,3 +17,11 @@
 .savelyImg {
     margin: auto;
 }
+
+header {
+    position: relative;
+}
+
+.portfolio {
+    background: white;
+}
