@@ -10,5 +10,5 @@
     left: 0px;
     bottom: 0px;
     width: 100%;
-    background: radial-gradient(#ffc38c, #ff9b40);
+    background: radial-gradient(#ffc38c, hsl(168, 76%, 42%) );
 }
