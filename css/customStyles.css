@@ -25,3 +25,7 @@ header {
 .portfolio {
     background: white;
 }
+
+.previewPhoto{
+    display: none;
+}
